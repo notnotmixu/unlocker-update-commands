@@ -1,0 +1,5724 @@
+victory_objectives
+{
+	//*****************************************//
+	//**************** TYRION *****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_hef_eataine;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_hef;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_def_cult_of_pleasure;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_followers_of_nagash;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_hef_eataine;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_hef;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_hef_eataine;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//**************** TECLIS *****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_hef_order_of_loremasters;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef_teclis;
+				}
+
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_hef;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_main_def_cult_of_pleasure;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_followers_of_nagash;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}	
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_hef_order_of_loremasters;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_hef;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_hef_order_of_loremasters;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//***************** IMRIK *****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc15_hef_imrik;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef_imrik;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_hef;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_def_cult_of_pleasure;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_followers_of_nagash;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc15_hef_imrik;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef_imrik;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_hef;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc15_hef_imrik;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//************** ELTHARION ****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_hef_yvresse;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													
+				{
+					type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource yvresse_defence;
+					total 100;
+					additive;
+				}
+				
+				objective
+                {
+					override_text mission_text_text_mis_activity_eltharion_final_battle;
+                    type SCRIPTED;
+                    script_key complete_eltharion_final_battle;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_dlc15_grn_broken_axe;
+					faction wh2_main_def_cult_of_pleasure;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_followers_of_nagash;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_hef_yvresse;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													
+				{
+					type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource yvresse_defence;
+					total 100;
+					additive;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc15_qb_hef_final_battle_eltharion;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_hef_yvresse;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													
+				{
+					type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource yvresse_defence;
+					total 100;
+					additive;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc15_qb_hef_final_battle_eltharion;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//*************** MALEKITH ****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_def_naggarond;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_def;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_def;
+				}
+
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_def;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_main_hef_order_of_loremasters;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}	
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_def_naggarond;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_def;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_def;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_def;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_def_naggarond;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_def;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_def_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//**************** MORATHI ****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_def_cult_of_pleasure;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_def;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_def_morathi;
+				}
+
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_def;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_main_hef_order_of_loremasters;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_def_cult_of_pleasure;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_def;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_def;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_def;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_def_cult_of_pleasure;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_def;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_def_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//************ LORD MAZDAMUNDI ************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_lzd_hexoatl;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd;
+				}
+
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_lzd;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_hef_order_of_loremasters;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_followers_of_nagash;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_lzd_hexoatl;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_lzd;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_lzd_hexoatl;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//*************** KROQ-GAR ****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_lzd_last_defenders;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd_kroq_gar;
+				}
+
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_lzd;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_def_cult_of_pleasure;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_followers_of_nagash;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_lzd_last_defenders;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_lzd;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_lzd_last_defenders;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//************ TEHENHAUIN ************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc12_lzd_cult_of_sotek;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd_tehenhauin;
+				}
+
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_lzd;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_def_cult_of_pleasure;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_skyre;
+					faction wh2_dlc09_tmb_followers_of_nagash;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc12_lzd_cult_of_sotek;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_lzd;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc12_lzd_cult_of_sotek;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//************ TIKTAQ'TO ************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_lzd_tlaqua;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd_tiktaqto;
+				}
+
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_lzd;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_lzd_tlaqua;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_lzd;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_lzd_tlaqua;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//************ GOR-ROK ********************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_lzd_itza;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd_gor_rok;
+				}
+
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_lzd;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_hef_eataine;
+					faction wh2_dlc11_cst_vampire_coast;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_main_hef_order_of_loremasters;
+					faction wh2_dlc13_emp_the_huntmarshals_expedition;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_lzd_itza;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_lzd;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_lzd_itza;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_lzd;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_lzd_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//************ NAKAI **********************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc13_lzd_spirits_of_the_jungle;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh_dlc03_victory_type_major;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{		
+				objective
+                {
+					type VASSALS_OWN_BUILDINGS;
+                    faction wh2_dlc13_lzd_spirits_of_the_jungle;
+					building_level wh2_dlc13_lzd_nakai_itzl;
+                    building_level wh2_dlc13_lzd_nakai_quetzl;
+                    building_level wh2_dlc13_lzd_nakai_xholankha;
+                    building_level wh2_dlc13_lzd_port_nakai_itzl;
+                    building_level wh2_dlc13_lzd_port_nakai_quetzl;
+                    building_level wh2_dlc13_lzd_port_nakai_xholankha;
+					total 40;
+					
+                }
+				objective
+                {
+					override_text mission_text_text_mis_activity_kill_all_hunters;
+                    type SCRIPTED;
+                    script_key kill_four_hunters;
+                }
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_dlc13_emp_the_huntmarshals_expedition;
+					confederation_valid;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc13_qb_lzd_final_battle_nakai;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				
+				objective
+                {
+					type VASSALS_OWN_BUILDINGS;
+                    faction wh2_dlc13_lzd_spirits_of_the_jungle;
+					building_level wh2_dlc13_lzd_nakai_itzl;
+                    building_level wh2_dlc13_lzd_nakai_quetzl;
+                    building_level wh2_dlc13_lzd_nakai_xholankha;
+                    building_level wh2_dlc13_lzd_port_nakai_itzl;
+                    building_level wh2_dlc13_lzd_port_nakai_quetzl;
+                    building_level wh2_dlc13_lzd_port_nakai_xholankha;
+					total 70;
+					
+                }
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_main_hef_order_of_loremasters;
+					faction wh2_dlc13_emp_the_huntmarshals_expedition;
+					confederation_valid;
+				}
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc13_lzd_spirits_of_the_jungle;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type ALL_PLAYERS_RAZE_OR_OWN_X_SETTLEMENTS;
+					total 140;
+				}
+				objective
+				{
+					type OWN_N_UNITS;
+					total 40;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc13_lzd_spirits_of_the_jungle;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+                {
+					type VASSALS_OWN_BUILDINGS;
+                    faction wh2_dlc13_lzd_spirits_of_the_jungle;
+					building_level wh2_dlc13_lzd_nakai_itzl;
+                    building_level wh2_dlc13_lzd_nakai_quetzl;
+                    building_level wh2_dlc13_lzd_nakai_xholankha;
+                    building_level wh2_dlc13_lzd_port_nakai_itzl;
+                    building_level wh2_dlc13_lzd_port_nakai_quetzl;
+                    building_level wh2_dlc13_lzd_port_nakai_xholankha;
+					total 70;
+					
+                }
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//************ QUEEK HEADTAKER ************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_skv_clan_mors;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_skv;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_skv;
+				}
+
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_skv;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_def_cult_of_pleasure;
+					faction wh2_main_hef_order_of_loremasters;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_skv_clan_mors;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_skv;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_skv;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_skv;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_skv_clan_mors;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_skv;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_skv_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//************** LORD SKROLK **************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_skv_clan_pestilens;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_skv;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_skv_lord_skrolk;
+				}
+
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_skv;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_hef_order_of_loremasters;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_skv_clan_pestilens;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_skv;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_skv;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_skv;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_skv_clan_pestilens;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_skv;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_skv_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//*********** TRETCH CRAVENTAIL ***********//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc09_skv_clan_rictus;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_skv;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_skv_tretch;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_skv;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_hef_order_of_loremasters;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc09_skv_clan_rictus;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_skv;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_skv;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_skv;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc09_skv_clan_rictus;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_skv;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_skv_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//************ IKIT CLAW ************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_skv_clan_skyre;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_skv;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_skv_ikit_claw;
+				}
+
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_skv;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_order_of_loremasters;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_dlc12_lzd_cult_of_sotek;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_skv_clan_skyre;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_skv;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_skv;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_skv;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_skv_clan_skyre;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_skv;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_skv_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	
+	//*****************************************//
+	//***************** SETTRA ****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc09_tmb_khemri;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh_dlc03_victory_type_major;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Collect 5 books of nagash
+				{
+					override_text mission_text_text_mis_activity_collect_books_of_nagash_0;
+                    type SCRIPTED;
+                    script_key collect_books_of_nagash_settra;
+				}
+				
+				objective
+				{
+					type OWN_N_REGIONS_INCLUDING;							// Capture the Black Pyramid of Nagash region
+					total 1;
+					region wh2_main_vor_great_mortis_delta_black_pyramid_of_nagash;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc09_qb_tmb_final_battle_settra;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_dlc09_tmb_followers_of_nagash;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc09_tmb_khemri;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Collect 5 books of nagash
+				{
+					override_text mission_text_text_mis_activity_collect_books_of_nagash_coop_0;
+                    type SCRIPTED;
+                    script_key collect_books_of_nagash_coop;
+				}
+				
+				objective
+				{
+					type CONTROL_N_REGIONS_INCLUDING;						// Control the Black Pyramid of Nagash region
+					total 1;
+					region wh2_main_vor_great_mortis_delta_black_pyramid_of_nagash;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc09_tmb_khemri;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Collect 5 books of nagash
+				{
+					override_text mission_text_text_mis_activity_collect_books_of_nagash_0;
+                    type SCRIPTED;
+                    script_key collect_books_of_nagash_settra;
+				}
+				
+				objective
+				{
+					type OWN_N_REGIONS_INCLUDING;							// Capture the Black Pyramid of Nagash region
+					total 1;
+					region wh2_main_vor_great_mortis_delta_black_pyramid_of_nagash;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//**************** KHALIDA ****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc09_tmb_lybaras;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh_dlc03_victory_type_major;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Collect 5 books of nagash
+				{
+					override_text mission_text_text_mis_activity_collect_books_of_nagash_0;
+                    type SCRIPTED;
+                    script_key collect_books_of_nagash_khalida;
+				}
+				
+				objective
+				{
+					type OWN_N_REGIONS_INCLUDING;							// Capture the Black Pyramid of Nagash region
+					total 1;
+					region wh2_main_vor_great_mortis_delta_black_pyramid_of_nagash;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc09_qb_tmb_final_battle_khalida;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_followers_of_nagash;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc09_tmb_lybaras;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Collect 5 books of nagash
+				{
+					override_text mission_text_text_mis_activity_collect_books_of_nagash_coop_0;
+                    type SCRIPTED;
+                    script_key collect_books_of_nagash_coop;
+				}
+				
+				objective
+				{
+					type CONTROL_N_REGIONS_INCLUDING;						// Control the Black Pyramid of Nagash region
+					total 1;
+					region wh2_main_vor_great_mortis_delta_black_pyramid_of_nagash;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc09_tmb_lybaras;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Collect 5 books of nagash
+				{
+					override_text mission_text_text_mis_activity_collect_books_of_nagash_0;
+                    type SCRIPTED;
+                    script_key collect_books_of_nagash_khalida;
+				}
+				
+				objective
+				{
+					type OWN_N_REGIONS_INCLUDING;							// Capture the Black Pyramid of Nagash region
+					total 1;
+					region wh2_main_vor_great_mortis_delta_black_pyramid_of_nagash;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//***************** KHATEP ****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc09_tmb_exiles_of_nehek;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh_dlc03_victory_type_major;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Collect 5 books of nagash
+				{
+					override_text mission_text_text_mis_activity_collect_books_of_nagash_0;
+                    type SCRIPTED;
+                    script_key collect_books_of_nagash_khatep;
+				}
+				
+				objective
+				{
+					type OWN_N_REGIONS_INCLUDING;							// Capture the Black Pyramid of Nagash region
+					total 1;
+					region wh2_main_vor_great_mortis_delta_black_pyramid_of_nagash;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc09_qb_tmb_final_battle_khatep;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_def_cult_of_pleasure;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_followers_of_nagash;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc09_tmb_exiles_of_nehek;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Collect 5 books of nagash
+				{
+					override_text mission_text_text_mis_activity_collect_books_of_nagash_coop_0;
+                    type SCRIPTED;
+                    script_key collect_books_of_nagash_coop;
+				}
+				
+				objective
+				{
+					type CONTROL_N_REGIONS_INCLUDING;						// Control the Black Pyramid of Nagash region
+					total 1;
+					region wh2_main_vor_great_mortis_delta_black_pyramid_of_nagash;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc09_tmb_exiles_of_nehek;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Collect 5 books of nagash
+				{
+					override_text mission_text_text_mis_activity_collect_books_of_nagash_0;
+                    type SCRIPTED;
+                    script_key collect_books_of_nagash_khatep;
+				}
+				
+				objective
+				{
+					type OWN_N_REGIONS_INCLUDING;							// Capture the Black Pyramid of Nagash region
+					total 1;
+					region wh2_main_vor_great_mortis_delta_black_pyramid_of_nagash;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//***************** ARKHAN ****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc09_tmb_followers_of_nagash;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh_dlc03_victory_type_major;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Collect 5 books of nagash
+				{
+					override_text mission_text_text_mis_activity_collect_books_of_nagash_1;
+                    type SCRIPTED;
+                    script_key collect_books_of_nagash_arkhan;
+				}
+				
+				objective													// Complete the Staff of Nagash quest battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc09_qb_tmb_arkhan_the_staff_of_nagash_stage_5_staff_of_nagash;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc09_qb_tmb_final_battle_arkhan;
+				}
+				
+				objective
+				{
+					type OWN_N_REGIONS_INCLUDING;							// Capture the Black Pyramid of Nagash region
+					total 1;
+					region wh2_main_vor_great_mortis_delta_black_pyramid_of_nagash;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_hef_order_of_loremasters;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc09_tmb_followers_of_nagash;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Collect 5 books of nagash
+				{
+					override_text mission_text_text_mis_activity_collect_books_of_nagash_1;
+                    type SCRIPTED;
+                    script_key collect_books_of_nagash_arkhan;
+				}
+				
+				objective													// Complete the Staff of Nagash quest battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc09_qb_tmb_arkhan_the_staff_of_nagash_stage_5_staff_of_nagash;
+				}
+				
+				objective
+				{
+					type OWN_N_REGIONS_INCLUDING;							// Capture the Black Pyramid of Nagash region
+					total 1;
+					region wh2_main_vor_great_mortis_delta_black_pyramid_of_nagash;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//************ ALITH ANAR *****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_hef_nagarythe;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef_alith_anar;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_hef;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_main_def_cult_of_pleasure;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_mors;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_hef_nagarythe;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef_alith_anar;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_hef;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_hef_nagarythe;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	//*****************************************//
+	//************ ALARILLE *******************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_hef_avelorn;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef_alarielle;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_hef;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_main_def_cult_of_pleasure;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_mors;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_hef_avelorn;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef_alarielle;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_hef;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_hef_avelorn;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_hef;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_hef_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//*************** HELLEBRON ***************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_def_har_ganeth;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_def;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_def_hellebron;
+				}
+
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_def;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_main_hef_order_of_loremasters;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_main_skv_clan_mors;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}	
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_def_har_ganeth;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_def;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_def_hellebron;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_def;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_def_har_ganeth;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_def;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_def_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//*************** LOKHIR FELLHEART ********//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc11_def_the_blessed_dread;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_def;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_def_lokhir;
+				}
+
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_def;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_main_hef_order_of_loremasters;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_skv_clan_pestilens;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}	
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc11_def_the_blessed_dread;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_def;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_def;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+                }
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_def;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc11_def_the_blessed_dread;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_main_ritual_vortex_def;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_main_qb_final_battle_def_head_to_head;
+				}
+				objective
+				{
+                    type SCRIPTED;
+                    script_key final_battle_condition;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	//*****************************************//
+	//************* LUTHOR HARKON *************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc11_cst_vampire_coast;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh_dlc03_victory_type_major;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Gain Harpoon
+				{
+					override_text mission_text_text_mis_activity_gain_harpoon;
+                    type SCRIPTED;
+                    script_key gain_harpoon;
+				}
+				objective													// Gain all Shanties
+				{
+					override_text mission_text_text_mis_activity_gain_all_shanties;
+                    type SCRIPTED;
+                    script_key gain_all_shanties;
+				}
+				objective													// Build Harpoon Launcher
+				{
+					override_text mission_text_text_mis_activity_build_harpoon_launcher;
+                    type SCRIPTED;
+                    script_key build_harpoon_launcher;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc11_qb_cst_final_battle;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_khemri;
+					faction wh2_dlc11_cst_noctilus;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc11_cst_vampire_coast;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Top of infamy board
+				{
+                    type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource cst_infamy;
+					total 10000;
+					additive;
+				}
+				
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc11_cst_vampire_coast;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Top of infamy board
+				{
+                    type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource cst_infamy;
+					total 10000;
+					additive;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 30;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	//*****************************************//
+	//************ COUNT NOCTILUS *************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc11_cst_noctilus;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh_dlc03_victory_type_major;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Gain Harpoon
+				{
+					override_text mission_text_text_mis_activity_gain_harpoon;
+                    type SCRIPTED;
+                    script_key gain_harpoon;
+				}
+				objective													// Gain all Shanties
+				{
+					override_text mission_text_text_mis_activity_gain_all_shanties;
+                    type SCRIPTED;
+                    script_key gain_all_shanties;
+				}
+				objective													// Build Harpoon Launcher
+				{
+					override_text mission_text_text_mis_activity_build_harpoon_launcher;
+                    type SCRIPTED;
+                    script_key build_harpoon_launcher;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc11_qb_cst_final_battle_noctilus;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_khemri;
+					faction wh2_dlc11_cst_pirates_of_sartosa;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc11_cst_noctilus;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Top of infamy board
+				{
+                    type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource cst_infamy;
+					total 10000;
+					additive;
+				}
+				
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc11_cst_noctilus;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Top of infamy board
+				{
+                    type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource cst_infamy;
+					total 10000;
+					additive;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 30;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	//*****************************************//
+	//*********** ARANESSA SALTSPITE ***********//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc11_cst_pirates_of_sartosa;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh_dlc03_victory_type_major;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Gain Harpoon
+				{
+					override_text mission_text_text_mis_activity_gain_harpoon;
+                    type SCRIPTED;
+                    script_key gain_harpoon;
+				}
+				objective													// Gain all Shanties
+				{
+					override_text mission_text_text_mis_activity_gain_all_shanties;
+                    type SCRIPTED;
+                    script_key gain_all_shanties;
+				}
+				objective													// Build Harpoon Launcher
+				{
+					override_text mission_text_text_mis_activity_build_harpoon_launcher;
+                    type SCRIPTED;
+                    script_key build_harpoon_launcher;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc11_qb_cst_final_battle_aranessa;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_khemri;
+					faction wh2_dlc11_cst_noctilus;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc11_cst_pirates_of_sartosa;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Top of infamy board
+				{
+                    type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource cst_infamy;
+					total 10000;
+					additive;
+				}
+				
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc11_cst_pirates_of_sartosa;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Top of infamy board
+				{
+                    type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource cst_infamy;
+					total 10000;
+					additive;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 30;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	//*****************************************//
+	//*********** CYLOSTRA DIREFIN ************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc11_cst_the_drowned;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh_dlc03_victory_type_major;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Gain Harpoon
+				{
+					override_text mission_text_text_mis_activity_gain_harpoon;
+                    type SCRIPTED;
+                    script_key gain_harpoon;
+				}
+				objective													// Gain all Shanties
+				{
+					override_text mission_text_text_mis_activity_gain_all_shanties;
+                    type SCRIPTED;
+                    script_key gain_all_shanties;
+				}
+				objective													// Build Harpoon Launcher
+				{
+					override_text mission_text_text_mis_activity_build_harpoon_launcher;
+                    type SCRIPTED;
+                    script_key build_harpoon_launcher;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc11_qb_cst_final_battle_cylostra;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_hef_avelorn;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc11_cst_the_drowned;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Top of infamy board
+				{
+                    type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource cst_infamy;
+					total 10000;
+					additive;
+				}
+				
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc11_cst_the_drowned;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Top of infamy board
+				{
+                    type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource cst_infamy;
+					total 10000;
+					additive;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 30;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//**************** MARKUS WULFHART ********//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc13_emp_the_huntmarshals_expedition;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh_dlc03_victory_type_major;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{				
+				objective
+				{
+					type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource emp_progress;
+					total 100;
+					additive;
+				}
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_dlc13_lzd_spirits_of_the_jungle;
+					confederation_valid;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc13_qb_emp_final_battle_wulfhart;
+				}
+					
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_dlc13_lzd_spirits_of_the_jungle;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc13_emp_the_huntmarshals_expedition;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{				
+				objective
+				{
+					type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource emp_progress;
+					total 100;
+					additive;
+				}
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc13_emp_the_huntmarshals_expedition;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{		
+				objective
+				{
+					type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource emp_progress;
+					total 100;
+					additive;
+				}				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 30 provinces
+					total 20;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//***************** MALUS *****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_def_hag_graef;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource wh2_main_ritual_currency;
+					total 1500;
+					additive;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc14_qb_def_final_battle_malus;
+				}
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_def;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_lzd_last_defenders;
+					faction wh2_dlc14_brt_chevaliers_de_lyonesse;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_skv_clan_eshin;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}	
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_def_hag_graef;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource wh2_main_ritual_currency;
+					total 1500;
+					additive;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc14_qb_def_final_battle_malus;
+				}
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_def;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_def_hag_graef;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Vortex ritual chain
+				{
+					type HAVE_AT_LEAST_X_OF_A_POOLED_RESOURCE;
+					pooled_resource wh2_main_ritual_currency;
+					total 1500;
+					additive;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc14_qb_def_final_battle_malus;
+				}
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//**************** SNIKTCH ****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_skv_clan_eshin;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type PERFORM_RITUAL;
+					ritual_category ESHIN_VORTEX_RITUAL;
+					total 3;
+				}	
+				
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_def_hag_graef;
+					confederation_valid;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc14_qb_skv_final_battle_snikch;
+				}
+				
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_skv;
+						turns 0;
+                    }
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_dlc14_brt_chevaliers_de_lyonesse;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_hef_order_of_loremasters;
+					faction wh2_dlc09_tmb_khemri;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_skv_clan_eshin;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Eshin ritual chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_dlc14_ritual_vortex_eshin;
+					is_co_op;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc14_qb_skv_final_battle_snikch;
+				}
+				payload
+				{
+					game_victory;
+					effect_bundle
+					{
+						bundle_key wh2_main_vortex_victory_bumper_bundle_skv;
+						turns 0;
+                    }
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_skv_clan_eshin;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the Eshin Ritual Chain
+				{
+					type COMPLETE_RITUAL_CHAIN;
+					ritual_chain wh2_dlc14_ritual_vortex_eshin;
+				}
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc14_qb_skv_final_battle_snikch;
+				}	
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//******************************************//
+	//******************************************//
+	//**************** REPANSE *****************//
+	//******************************************//
+	//******************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc14_brt_chevaliers_de_lyonesse;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective // Attain Chivalrous Chivalry.
+				{
+					override_text mission_text_text_mis_activity_attain_chivalry_1000;
+                    type SCRIPTED;
+                    script_key attain_chivalry_2000;
+				}
+				
+				objective // Complete the final Errantry War battle.
+				{
+					override_text mission_text_text_mis_activity_win_errantry_war;
+                    type SCRIPTED;
+                    script_key win_errantry_war;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_skv_clan_eshin;
+					faction wh2_main_def_naggarond;
+					faction wh2_dlc09_tmb_khemri;
+					faction wh2_dlc09_tmb_lybaras;
+					faction wh2_main_def_hag_graef;
+					faction wh2_main_skv_clan_mors;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc14_brt_chevaliers_de_lyonesse;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type RAZE_OR_OWN_X_SETTLEMENTS;
+					total 100;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc14_brt_chevaliers_de_lyonesse;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective // Attain Chivalrous Chivalry.
+				{
+					override_text mission_text_text_mis_activity_attain_chivalry_1000;
+                    type SCRIPTED;
+                    script_key attain_chivalry_1000;
+				}
+				
+				objective // Complete the final Errantry War battle.
+				{
+					override_text mission_text_text_mis_activity_win_errantry_war;
+                    type SCRIPTED;
+                    script_key win_errantry_war;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc14_brt_chevaliers_de_lyonesse;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective // Attain Chivalrous Chivalry.
+				{
+					override_text mission_text_text_mis_activity_attain_chivalry_1000;
+                    type SCRIPTED;
+                    script_key attain_chivalry_1000;
+				}
+				
+				objective // Complete the final Errantry War battle.
+				{
+					override_text mission_text_text_mis_activity_win_errantry_war;
+                    type SCRIPTED;
+                    script_key win_errantry_war;
+				}
+				
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//***************** GROM ******************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc15_grn_broken_axe;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_yvresse;
+					confederation_valid;
+				}
+				
+				objective
+                {
+					override_text mission_text_text_mis_activity_blacktoofs_revenge;
+                    type SCRIPTED;
+                    script_key complete_blacktoof_revenge;
+                }
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc15_qb_grn_final_battle_grom;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_caledor;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_main_hef_order_of_loremasters;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc15_grn_broken_axe;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_yvresse;
+					confederation_valid;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc15_qb_grn_final_battle_grom;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc15_grn_broken_axe;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc15_qb_grn_final_battle_grom;
+				}
+				objective
+				{
+					type RAZE_OR_OWN_X_SETTLEMENTS;
+					total 50;
+				}
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//***************** THROT *****************//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_main_skv_clan_moulder;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													
+				{
+					type DESTROY_FACTION;
+					faction wh2_dlc16_wef_sisters_of_twilight;
+					confederation_valid;
+				}
+				
+				objective
+                {
+					override_text mission_text_text_mis_activity_throt_final_battle;
+                    type SCRIPTED;
+                    script_key complete_throt_final_battle;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_caledor;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_main_hef_order_of_loremasters;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_main_skv_clan_moulder;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													
+				{
+					type DESTROY_FACTION;
+					faction wh2_dlc16_wef_sisters_of_twilight;
+					confederation_valid;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc16_qb_skv_final_battle_throt;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_main_skv_clan_moulder;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type RAZE_OR_OWN_X_SETTLEMENTS;
+					total 70;
+				}
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//*****************************************//
+	//********** SISTERS OF TWILIGHT **********//
+	//*****************************************//
+	
+	//**** SINGLE PLAYER ****//
+	victory_objective
+	{
+		faction wh2_dlc16_wef_sisters_of_twilight;
+		campaign_type sp_normal;
+		
+		//**** ULTIMATE CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_vortex;
+			key wh_main_long_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				
+				objective										
+				{
+					override_text mission_text_text_mis_activity_ritual_rebirth_vortex;
+					type PERFORM_RITUAL;
+					ritual_category WORLDROOTS_HEALING;
+					total 2;
+				}
+				
+				objective													
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_skv_clan_moulder;
+					confederation_valid;
+				}
+				
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc16_qb_wef_final_battle_sisters;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+		//**** DOMINATION CAMPAIGN ****//
+ 		mission
+		{
+			victory_type wh2_main_victory_type_vortex_domination;
+			key wh2_main_vor_domination_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type DESTROY_FACTION;
+					faction wh2_main_hef_caledor;
+					faction wh2_main_hef_eataine;
+					faction wh2_main_def_naggarond;
+					faction wh2_main_lzd_hexoatl;
+					faction wh2_main_skv_clan_mors;
+					faction wh2_main_hef_order_of_loremasters;
+					confederation_valid;
+				}
+				
+				objective
+				{
+					type CONTROL_N_PROVINCES_INCLUDING;							// Capture at least 50 provinces
+					total 50;
+				}
+				
+				objective
+                {
+                    type SCRIPTED;
+                    script_key domination;
+                }
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER CO-OP **
+	victory_objective
+	{
+		faction wh2_dlc16_wef_sisters_of_twilight;
+		campaign_type mp_co_op_normal;
+		
+		mission
+		{
+			victory_type wh_main_victory_type_mp_coop;
+			key wh_main_mp_coop_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective													
+				{
+					type DESTROY_FACTION;
+					faction wh2_dlc16_wef_sisters_of_twilight;
+					confederation_valid;
+				}
+				
+				objective													// Complete the final battle
+				{
+					type FIGHT_SET_PIECE_BATTLE;
+					set_piece_battle wh2_dlc16_qb_wef_final_battle_sisters;
+				}
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+	
+	//** MULTIPLAYER HEAD-TO-HEAD VERSUS **
+	victory_objective
+	{
+		faction wh2_dlc16_wef_sisters_of_twilight;
+		campaign_type mp_vs_normal;
+		mission
+		{
+			victory_type wh_main_victory_type_mp_versus;
+			key wh_main_mp_versus_victory;
+			issuer CLAN_ELDERS;
+			primary_objectives_and_payload
+			{
+				objective
+				{
+					type RAZE_OR_OWN_X_SETTLEMENTS;
+					total 70;
+				}
+				//
+				
+				payload
+				{
+					game_victory;
+				}
+			}
+		}
+	}
+}
